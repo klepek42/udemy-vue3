@@ -29,6 +29,11 @@ const app = Vue.createApp({
     logConsole(text) {
       console.log(text);
     },
+    calcTotalVotes() {
+      return this.submissions.reduce((totalVotes, submissions) => {
+        return totalVotes + submissions.votes;
+      }, 0);
+    }
 
     // Keine Arrow-Functions nutzen, da this hier nicht nutzbar ist (zeigt auf Window-Objekt)!
     /*

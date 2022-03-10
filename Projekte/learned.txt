@@ -1,5 +1,6 @@
 * Daten als Array mit Objekten aus einer JS-Datei auslesen und verarbeiten
 * Textinterpolationen (Manipulationen)
+* $data Attribut hält alle Daten der Root-Component
 
 Directives (zur Interpolation)
 * v-once (nur einmaliges zu Beginn Rendern erzwingen)
@@ -16,3 +17,7 @@ Event-Handling (Events, Event-Listeners, Event Modifiers)
 * Explizite Übergabe des Event-Parameters mit $event
 * Verwendung von mehreren Event-Handlern gleichzeitig (nur mit expliziter Parameter Schreibweise möglich)
 * Event Modifier (z.B. bei click -> click.right zur Modifizierung auf Rechtsklick statt Linksklick)
+
+* Reduce Methode (Iteriert über alle Werte eines Arrays zu einer gegeben Callback-Funktion)
+* Nachteil von Methods: Sie reagieren auf jegliche Veränderung des Datenmodells und bieten sich somit nicht an um dynamisch auf Veränderungen des Datenmodells zu reagieren, da es so zu unerwünschten Funktoinsaufrufen kommen kann
+* computed-Attribut

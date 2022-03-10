@@ -25,10 +25,10 @@ const submissions = [
     },
     {
         id: 4,
-        title: 'Gulasch',
-        desc: 'Ein traditionelles Ragout.',
-        votes: 24,
-        author: 'Ungarn',
+        title: 'Gyoza',
+        desc: 'Der japanische Liebling.',
+        votes: 104,
+        author: 'Japan',
         img: 'https://via.placeholder.com/64'
     }
 ]

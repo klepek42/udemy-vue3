@@ -23,8 +23,9 @@
           <div class="col-xl-4 offset-xl-4">
             <div class="card mt-5">
               <div class="card-header">
-                <h2 class="card-title">Wähle deinen Favoriten!</h2>
-                  <span class="float-end">16 Stimmen</span>
+                <h2 class="card-title">Stimme ab!
+                  <span class="float-end">{{ calcTotalVotes() }} Stimmen</span>
+                </h2>
               </div>
               <div class="card-body">
                 <div class="d-flex">
@@ -39,13 +40,13 @@
                         <span
                         class="float-end text-primary"
                         style="cursor: pointer"
-                        v-on:click.right="upvote('Stimme abgegeben!', $event)"
+                        v-on:click="upvote('Stimme abgegeben!', $event)"
                         >
                       <!-- Mehrere Event-Handler
                         <span
                         class="float-end text-primary"
                         style="cursor: pointer"
-                        v-on:click="upvote($event), logConsole('Stimme abgegeben!')"
+                        v-on:click.right="upvote($event), logConsole('Stimme abgegeben!')"
                         >
                       -->
                         <i class="fa fa-chevron-up"></i
