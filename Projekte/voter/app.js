@@ -1,9 +1,18 @@
 const app = Vue.createApp({
+
   // Optionen
   data: function () {
     return {
       submissions: submissions, // Daten aus seed.js
     };
+  },
+  computed: {
+    calcTotalVotes() {
+      console.log("computed property ausgeführt");
+      return this.submissions.reduce((totalVotes, submissions) => {
+        return totalVotes + submissions.votes;
+      }, 0);
+    }
   },
   methods: {
     // upvote: function () {} // Funktionales Equivalent
@@ -29,11 +38,12 @@ const app = Vue.createApp({
     logConsole(text) {
       console.log(text);
     },
+    /*
     calcTotalVotes() {
       return this.submissions.reduce((totalVotes, submissions) => {
         return totalVotes + submissions.votes;
       }, 0);
-    }
+    }*/
 
     // Keine Arrow-Functions nutzen, da this hier nicht nutzbar ist (zeigt auf Window-Objekt)!
     /*

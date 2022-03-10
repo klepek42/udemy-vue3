@@ -20,4 +20,4 @@ Event-Handling (Events, Event-Listeners, Event Modifiers)
 
 * Reduce Methode (Iteriert über alle Werte eines Arrays zu einer gegeben Callback-Funktion)
 * Nachteil von Methods: Sie reagieren auf jegliche Veränderung des Datenmodells und bieten sich somit nicht an um dynamisch auf Veränderungen des Datenmodells zu reagieren, da es so zu unerwünschten Funktoinsaufrufen kommen kann
-* computed-Attribut
+* computed-Attribut (computed properties)
