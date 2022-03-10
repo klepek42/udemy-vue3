@@ -1,0 +1,18 @@
+* Daten als Array mit Objekten aus einer JS-Datei auslesen und verarbeiten
+* Textinterpolationen (Manipulationen)
+
+Directives (zur Interpolation)
+* v-once (nur einmaliges zu Beginn Rendern erzwingen)
+* v-html (erzwinge Verarbeitung als HTML anstatt von Text wie standardmäßig)
+* v-pre (nicht interpolieren, also ignorieren der vue-Syntax und Ausgabe als 1:1 Text)
+* v-bind:xy () Bindung an ein Attribut
+
+Event-Handling (Events, Event-Listeners, Event Modifiers)
+* Verwendung des methods-Attribut (inkl. this-Objekt und event-Objekt)
+* Event-Handling mit v-on (z.B. click)
+* Root-Component
+* Funktionsaufruf ohne Klammern (Übergabe des event-Objekts)
+* Funktionsaufruf mit Klammern (nur mit expliziten angegebenen Parametern)
+* Explizite Übergabe des Event-Parameters mit $event
+* Verwendung von mehreren Event-Handlern gleichzeitig (nur mit expliziter Parameter Schreibweise möglich)
+* Event Modifier (z.B. bei click -> click.right zur Modifizierung auf Rechtsklick statt Linksklick)
