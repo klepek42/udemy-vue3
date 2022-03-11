@@ -7,16 +7,21 @@ const app = Vue.createApp({
       totalVotes: 0,
     };
   },
-  /*
   computed: {
+    /*
     calcTotalVotes() {
       console.log("computed property ausgeführt");
       return this.submissions.reduce((totalVotes, submissions) => {
         return totalVotes + submissions.votes;
       }, 0);
     }
+    */
+   sortedSubmissions() {
+     return this.submissions.sort((a, b) => {
+       return b.votes - a.votes;
+     });
+   }
   },
-  */
   methods: {
     // upvote: function () {} // Funktionales Equivalent
 

@@ -28,7 +28,8 @@
                 </h2>
               </div>
               <div class="card-body">
-                <div class="d-flex" v-for="(submission, index) in submissions">
+
+                <div class="d-flex"v-for="(submission, index) in sortedSubmissions" v-bind:key="submission.id">
                   <div class="d-shrink-0">
                     <img v-bind:src="submission.img" alt="" />
                   </div>
@@ -55,6 +56,11 @@
                     </h5>
                     <!-- <div>{{ submissions[0].desc }}</div> -->
                     <div v-html="submission.desc"></div>
+                    <!-- Zur Demonstration der Attribute im Objekt von v-for
+                    <ul>
+                      <li v-for="(value, key, index) in submission">{{ index }} - {{ key }} - {{ value }}</li>
+                    </ul>
+                    -->
                     <!-- <div v-pre>{{ submissions[0].desc }}</div> -->
                     <small class="text-muted">Eingereicht von: {{ submission.author }}</small>
                   </div>

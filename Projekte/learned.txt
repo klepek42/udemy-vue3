@@ -27,3 +27,8 @@ Event-Handling (Events, Event-Listeners, Event Modifiers)
 ** watch immediate (true/false): Steuere die initiale Ausführung auch wenn noch keine Veränderung geschah
 * methods-Attribut VS computed-Attribut vs watch-Attribut
 * Fazit: Im Voter bietet sich für die Berechnung aller Votes am meisten das computed-Attribut an
+
+v-for
+* index, key, value (das Objekt und seine Argumente in der Iteration)
+* Sortierte Daten
+* Iteration spezifische Daten
