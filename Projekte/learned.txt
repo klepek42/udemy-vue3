@@ -7,6 +7,7 @@ Directives (zur Interpolation)
 * v-html (erzwinge Verarbeitung als HTML anstatt von Text wie standardmäßig)
 * v-pre (nicht interpolieren, also ignorieren der vue-Syntax und Ausgabe als 1:1 Text)
 * v-bind:xy () Bindung an ein Attribut
+* v-for (Verarbeitung als for-Schleife)
 
 Event-Handling (Events, Event-Listeners, Event Modifiers)
 * Verwendung des methods-Attribut (inkl. this-Objekt und event-Objekt)
@@ -21,3 +22,8 @@ Event-Handling (Events, Event-Listeners, Event Modifiers)
 * Reduce Methode (Iteriert über alle Werte eines Arrays zu einer gegeben Callback-Funktion)
 * Nachteil von Methods: Sie reagieren auf jegliche Veränderung des Datenmodells und bieten sich somit nicht an um dynamisch auf Veränderungen des Datenmodells zu reagieren, da es so zu unerwünschten Funktoinsaufrufen kommen kann
 * computed-Attribut (computed properties)
+* watch-Attribut (Daten beobachten; reagiert nur auf Veränderungen von Daten)
+** watch deep: Reagiere auch auf tiefer enthaltenen Werte statt nur oberflächlich
+** watch immediate (true/false): Steuere die initiale Ausführung auch wenn noch keine Veränderung geschah
+* methods-Attribut VS computed-Attribut vs watch-Attribut
+* Fazit: Im Voter bietet sich für die Berechnung aller Votes am meisten das computed-Attribut an

@@ -4,8 +4,10 @@ const app = Vue.createApp({
   data: function () {
     return {
       submissions: submissions, // Daten aus seed.js
+      totalVotes: 0,
     };
   },
+  /*
   computed: {
     calcTotalVotes() {
       console.log("computed property ausgeführt");
@@ -14,6 +16,7 @@ const app = Vue.createApp({
       }, 0);
     }
   },
+  */
   methods: {
     // upvote: function () {} // Funktionales Equivalent
 
@@ -51,7 +54,31 @@ const app = Vue.createApp({
       console.log(this);
     },
     */
-  }
+  },
+  watch: {
+    /*
+    // Kurze Schreibweise
+    submissions(newValue, oldValue) {
+      console.log(newValue);
+      console.log(oldValue);
+    },
+    */
+    // Lange Schreibweise
+    submissions: {
+      handler(newValue, oldValue) {
+        console.log(newValue);
+        console.log(oldValue);
+        this.totalVotes = this.submissions.reduce((totalVotes, submission) => {
+          return totalVotes + submission.votes;
+        }, 0);
+      },
+      deep: true,
+    },
+    totalVotes(newValue, oldValue) {
+      console.log(newValue);
+      console.log(oldValue);
+    },
+  },
 });
 
 // Liefert die Instanz zur Root-Component zurück
