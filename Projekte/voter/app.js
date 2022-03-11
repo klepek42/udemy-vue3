@@ -73,6 +73,7 @@ const app = Vue.createApp({
         }, 0);
       },
       deep: true,
+      immediate: true,
     },
     totalVotes(newValue, oldValue) {
       console.log(newValue);

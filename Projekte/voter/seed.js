@@ -1,24 +1,24 @@
 const submissions = [
     {
         id: 1 ,
-        title: 'Spaghetti Bolognese',
-        desc: 'Ein Nudelgericht <strong>mit</strong> Hackfleischsoße.',
+        title: 'Lasagne Al Forno',
+        desc: 'Ein sehr leckeres Gericht<strong>mit</strong> Hackfleisch.',
         votes: 16,
         author: 'Italien',
         img: 'https://via.placeholder.com/64'
     },
     {
         id: 2 ,
-        title: 'Wiener Schnitzel',
-        desc: 'Ein dünnes Schnitzel aus Kalbfleisch.',
+        title: 'Germknödel',
+        desc: 'Das bekannte Dessert aus den Berghütten.',
         votes: 5,
         author: 'Österreich',
         img: 'https://via.placeholder.com/64'
     },
     {
         id: 3 ,
-        title: 'Peking-Ente',
-        desc: 'Das kaiserliche Gericht.',
+        title: 'Shoyu Ramen',
+        desc: 'Die japanische Nudelsuppe für den großen Hunger.',
         votes: 20,
         author: 'China',
         img: 'https://via.placeholder.com/64'
@@ -26,7 +26,7 @@ const submissions = [
     {
         id: 4,
         title: 'Gyoza',
-        desc: 'Der japanische Liebling.',
+        desc: 'Die japanische Teigtasche mit unterschiedlichen Füllungen.',
         votes: 104,
         author: 'Japan',
         img: 'https://via.placeholder.com/64'
