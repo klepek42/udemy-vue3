@@ -24,47 +24,49 @@
             <div class="card mt-5">
               <div class="card-header">
                 <h2 class="card-title">Stimme ab!
-                  <span class="float-end">{{ totalVotes }} Stimmen</span>
+                  <span class="float-end">{{ calcTotalVotes }} Stimmen</span>
                 </h2>
               </div>
               <div class="card-body">
-
-                <div class="d-flex"v-for="(submission, index) in sortedSubmissions" v-bind:key="submission.id">
-                  <div class="d-shrink-0">
-                    <img v-bind:src="submission.img" alt="" />
-                  </div>
-                  <div class="flex-grow-1 ms-3">
-                    <!-- <h5 v-once> -->
-                    <h5>
-                        {{ submission.title }}
-                      <!-- Ein Event-Handler -->
-                        <span
-                        class="float-end text-primary"
-                        style="cursor: pointer"
-                        v-on:click="upvote('Stimme abgegeben!', $event)"
+                <template v-for="(submission, index) in sortedSubmissions" v-bind:key="submission.id">
+                  <div class="d-flex">
+                    <div class="d-shrink-0">
+                      <img v-bind:src="submission.img" alt="" />
+                    </div>
+                    <div class="flex-grow-1 ms-3">
+                      <!-- <h5 v-once> -->
+                      <h5>
+                          {{ submission.title }}
+                        <!-- Ein Event-Handler -->
+                          <span
+                          class="float-end text-primary"
+                          style="cursor: pointer"
+                          v-on:click="upvote(submission.id)"
+                          >
+                        <!-- Mehrere Event-Handler
+                          <span
+                          class="float-end text-primary"
+                          style="cursor: pointer"
+                          v-on:click.right="upvote($event), logConsole('Stimme abgegeben!')"
+                          >
+                        -->
+                          <i class="fa fa-chevron-up"></i
+                          ><strong>{{ submission.votes }}</strong></span
                         >
-                      <!-- Mehrere Event-Handler
-                        <span
-                        class="float-end text-primary"
-                        style="cursor: pointer"
-                        v-on:click.right="upvote($event), logConsole('Stimme abgegeben!')"
-                        >
+                      </h5>
+                      <!-- <div>{{ submissions[0].desc }}</div> -->
+                      <div v-html="submission.desc"></div>
+                      <!-- Zur Demonstration der Attribute im Objekt von v-for
+                      <ul>
+                        <li v-for="(value, key, index) in submission">{{ index }} - {{ key }} - {{ value }}</li>
+                      </ul>
                       -->
-                        <i class="fa fa-chevron-up"></i
-                        ><strong>{{ submission.votes }}</strong></span
-                      >
-                    </h5>
-                    <!-- <div>{{ submissions[0].desc }}</div> -->
-                    <div v-html="submission.desc"></div>
-                    <!-- Zur Demonstration der Attribute im Objekt von v-for
-                    <ul>
-                      <li v-for="(value, key, index) in submission">{{ index }} - {{ key }} - {{ value }}</li>
-                    </ul>
-                    -->
-                    <!-- <div v-pre>{{ submissions[0].desc }}</div> -->
-                    <small class="text-muted">Eingereicht von: {{ submission.author }}</small>
+                      <!-- <div v-pre>{{ submissions[0].desc }}</div> -->
+                      <small class="text-muted">Eingereicht von: {{ submission.author }}</small>
+                    </div>
                   </div>
-                </div>
+                  <hr />
+                </template>                
               </div>
             </div>
           </div>

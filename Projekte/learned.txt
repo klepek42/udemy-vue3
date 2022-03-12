@@ -32,3 +32,4 @@ v-for
 * index, key, value (das Objekt und seine Argumente in der Iteration)
 * Sortierte Daten
 * Iteration spezifische Daten
+* Verwendung des template Tags für eine Trennlinie zwischen Listeneinträgen

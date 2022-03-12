@@ -4,18 +4,16 @@ const app = Vue.createApp({
   data: function () {
     return {
       submissions: submissions, // Daten aus seed.js
-      totalVotes: 0,
+      //totalVotes: 0,
     };
   },
   computed: {
-    /*
     calcTotalVotes() {
-      console.log("computed property ausgeführt");
+      //console.log("computed property ausgeführt");
       return this.submissions.reduce((totalVotes, submissions) => {
         return totalVotes + submissions.votes;
       }, 0);
-    }
-    */
+    },
    sortedSubmissions() {
      return this.submissions.sort((a, b) => {
        return b.votes - a.votes;
@@ -36,16 +34,24 @@ const app = Vue.createApp({
     */
 
     // Normale Funktionsschreibeweise mit Klammern und eigenen Parametern/Argumenten
-    upvote(infoText, event) {
-      this.submissions[0].votes++;
+    upvote(submissionId) {
+      //this.submissions[0].votes++;
+      
+      // Bewirke den Upvote auf die ausgewählte Submission
+      const submission = this.submissions.find(
+        (submission) => submission.id === submissionId
+      );
+      submission.votes++;
 
       console.log(this);  // this-Objekt zeigt auf die Root-Component
       console.log(infoText); // expliziter Parameter
       console.log(event);    // Event-Parameter explizit angegeben
     },
+    /*
     logConsole(text) {
       console.log(text);
     },
+    */
     /*
     calcTotalVotes() {
       return this.submissions.reduce((totalVotes, submissions) => {
@@ -69,6 +75,7 @@ const app = Vue.createApp({
     },
     */
     // Lange Schreibweise
+    /*
     submissions: {
       handler(newValue, oldValue) {
         console.log(newValue);
@@ -84,6 +91,7 @@ const app = Vue.createApp({
       console.log(newValue);
       console.log(oldValue);
     },
+    */
   },
 });
 
