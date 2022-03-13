@@ -31,5 +31,10 @@ Event-Handling (Events, Event-Listeners, Event Modifiers)
 v-for
 * index, key, value (das Objekt und seine Argumente in der Iteration)
 * Sortierte Daten
-* Iteration spezifische Daten
+* Iteration spezifischer Daten einer Datensammlung
 * Verwendung des template Tags für eine Trennlinie zwischen Listeneinträgen
+* Dynamische Bindung von classes (Verwendung von Objekt und Array-Schreibweise)
+* Dynamische Bindung von styles (Verwendung von Objekt)
+
+Components
+* Unterscheidung in globale und lokale Components (Global: von überall erreichbar/aufruf z.B. von jeder Component aus)

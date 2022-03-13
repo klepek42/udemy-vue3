@@ -14,11 +14,33 @@ const app = Vue.createApp({
         return totalVotes + submissions.votes;
       }, 0);
     },
-   sortedSubmissions() {
+    sortedSubmissions() {
      return this.submissions.sort((a, b) => {
        return b.votes - a.votes;
      });
-   }
+    },
+    cardHeaderBackgroundColor() {
+      // Gebe ein Objekt mit den style classes zurück (Objekt-Schreibweise)
+      // In dieser Funktion kann über this auf die Variablen zugegriffen werden
+      /*
+      return {
+        'bg-primary': this.calcTotalVotes >= 50,
+        'text-white': this.calcTotalVotes >= 50,
+
+        // Alternativ als ein kombinierter String
+        //'bg-primary text-white': this.calcTotalVotes >= 50,
+      }
+      */
+
+      // Gebe ein Array mit den style classes zurück (Array-Schreibweise)
+      if (this.calcTotalVotes >= 50) {
+        return ['bg-primary', 'text-white']
+      }
+
+    },
+    cardTitleFontSize() {
+      return { fontSize: this.calcTotalVotes/2+'px' };
+    }
   },
   methods: {
     // upvote: function () {} // Funktionales Equivalent

@@ -22,8 +22,10 @@
         <div class="row">
           <div class="col-xl-4 offset-xl-4">
             <div class="card mt-5">
-              <div class="card-header">
-                <h2 class="card-title">Stimme ab!
+              <!-- Alternative mit tenärem Operator und Array-Schreibweise -->
+              <!-- <div class="card-header" v-bind:class="[calcTotalVotes >= 50 ? 'bg-primary text-white' : '']"> -->
+              <div class="card-header" v-bind:class="cardHeaderBackgroundColor">
+                <h2 class="card-title" v-bind:style="cardTitleFontSize">Stimme ab!
                   <span class="float-end">{{ calcTotalVotes }} Stimmen</span>
                 </h2>
               </div>
