@@ -56,6 +56,7 @@ const app = Vue.createApp({
     */
 
     // Normale Funktionsschreibeweise mit Klammern und eigenen Parametern/Argumenten
+    /*
     upvote(submissionId) {
       //this.submissions[0].votes++;
       
@@ -64,11 +65,8 @@ const app = Vue.createApp({
         (submission) => submission.id === submissionId
       );
       submission.votes++;
-
-      console.log(this);  // this-Objekt zeigt auf die Root-Component
-      console.log(infoText); // expliziter Parameter
-      console.log(event);    // Event-Parameter explizit angegeben
     },
+    */
     /*
     logConsole(text) {
       console.log(text);
@@ -115,6 +113,66 @@ const app = Vue.createApp({
     },
     */
   },
+});
+
+// Globale Component
+app.component('SubmissionListItem', {
+  // Optionen
+  props: ['submission'],
+  methods: {
+    /*
+    upvote(submissionId) {
+      //this.submissions[0].votes++;
+      
+      // Bewirke den Upvote auf die ausgewählte Submission
+      const submission = this.submissions.find(
+        (submission) => submission.id === submissionId
+      );
+      submission.votes++;
+    },
+    */
+    upvote() {
+      this.submission.votes++;
+    },
+  },
+  template: `
+  <div class="d-flex">
+    <div class="d-shrink-0">
+      <img v-bind:src="submission.img" alt="" />
+    </div>
+    <div class="flex-grow-1 ms-3">
+      <!-- <h5 v-once> -->
+      <h5>
+          {{ submission.title }}
+        <!-- Ein Event-Handler -->
+          <span
+          class="float-end text-primary"
+          style="cursor: pointer"
+          v-on:click="upvote()"
+          >
+        <!-- Mehrere Event-Handler
+          <span
+          class="float-end text-primary"
+          style="cursor: pointer"
+          v-on:click.right="upvote($event), logConsole('Stimme abgegeben!')"
+          >
+        -->
+          <i class="fa fa-chevron-up"></i
+          ><strong>{{ submission.votes }}</strong></span
+        >
+      </h5>
+      <!-- <div>{{ submissions[0].desc }}</div> -->
+      <div v-html="submission.desc"></div>
+      <!-- Zur Demonstration der Attribute im Objekt von v-for
+      <ul>
+        <li v-for="(value, key, index) in submission">{{ index }} - {{ key }} - {{ value }}</li>
+      </ul>
+      -->
+      <!-- <div v-pre>{{ submissions[0].desc }}</div> -->
+      <small class="text-muted">Eingereicht von: {{ submission.author }}</small>
+    </div>
+  </div>
+  `,
 });
 
 // Liefert die Instanz zur Root-Component zurück

@@ -38,3 +38,14 @@ v-for
 
 Components
 * Unterscheidung in globale und lokale Components (Global: von überall erreichbar/aufruf z.B. von jeder Component aus)
+* Eigene Components in nahe zu allen Aspekten gleich zur Root-Component außer, dass keine Bindung an ein HTML-Element (z.B. #app) hergestellt werden muss
+* Verwendung im HTML als eigenes HTML-Tag
+* Pascal-Schreibweise z.B. SubmissionListItem
+* Die ganze Anwendung wird auch als Root-Component bezeichnet
+* Darunter liegende Components werden Child Components bezeichnet
+* Props: eigene Attribute z.B. zum Durchreichen von Daten vom Parent-Component an Child-Components
+* Child-Components dürfen keine Props vom Parent-Component verändern! (diese sind nur readonly)
+
+Abkürzungen
+* v-bind --> : (Doppelpunkt) --> :submission=submission
+* v-on   --> @ (at-Zeichen)  --> @click="upvote()"
