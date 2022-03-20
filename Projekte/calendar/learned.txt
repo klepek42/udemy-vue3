@@ -1,0 +1,30 @@
+Rahmenbedingungen/Infrastruktur
+* Statt die index.html im Browser auszuführen, soll nun das Projekt auf einem lokalen Webserver betrieben werden,
+um mit HTTP-Requests arbeiten zu können und um mit einer realen Umgebung zu entwicklen
+* Weitere Vorteile: Hot-Reload Funktion (Automatische Anzeige der Änderungen im Browser in Echtzeit)
+* App.vue ist ein Single File Component mit Bereichen für Template, Script und Style
+* App.vue ist die root-Component
+* Der Aufruf von "npm run serve" wandelt den Vue Code in reines JavaScript um, der in allen Browsern läuft
+* Komfortablere Entwicklung mit vue CLI durch npm (hiermit Einbindung von Vue, Bootstrap usw.)
+* "public"-Verzeichnis ist der generierte Output zum Transport auf einen Server (nach Ausführen eines Befehls)
+* "src"-Verzeichnis dient der Entwicklung des Projekts
+* Das "--save" bein npm install ist die explizite Schreibweise zur Speicherung des Dependency im Projektverzeichnis und wird in der Regel automatisch bereits im Projekt gespeichert
+* Babel ist ein JavaScript-Compiler (engl. JavaScript-Precompiler). Dadurch kann man die neuesten JS Features nutzen und Babel macht Sie für alle Browser (und gängigen Versionen nutzbar mit equivalenenten Implementierungen)
+* Babel lässt sich über die Optionen weiter konfigurieren wie z.B. ob bestimmte polyfills genutzt werden sollen oder nicht
+
+Learning
+* Mit @import wird Boostrap in den Einstiegspunkt des Projekts geladen, um im Projekt verfügbar zu sein
+* Die Tilde verweist auf das "node_modules"-Verzeichnis
+* Verwendung von Import und Export von Components mit modernem JavaScript
+* Alle Styles in einer Component sind standardmäßig global verfügbar!
+* Mit dem Schlüsselwort "scoped" lässt sich der Style einer Component auf die Component beschränken
+--> <style scoped><</style>
+* Globale Style kommen in die root-Component (App.vue)
+
+
+Verwendete Befehle
+* npm install -g @vue/cli
+* npm create projectName
+* npm run serve
+* npm install bootstrap
+* npm install --save @fortawesome/fontawesome-free
