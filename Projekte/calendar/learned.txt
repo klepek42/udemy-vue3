@@ -20,6 +20,13 @@ Learning
 * Mit dem Schlüsselwort "scoped" lässt sich der Style einer Component auf die Component beschränken
 --> <style scoped><</style>
 * Globale Style kommen in die root-Component (App.vue)
+* Verwendung eines Stores für die zentrale Datenhaltung (Single Source of Truth). Alle Components bedienen sich dann an diesem Store
+* 3 Komponenten eines Stores
+** State = Daten, die von der Anwendung verwaltet werden (als Key-Value Paare z.B. als JSON)
+** Getters = nachvollziehen welche Funktionen den State verändert haben oder Änderungen vorher validieren
+** Mutations = die eigentliche Änderung der Daten
+* Reactivity System von Vue.js sorgt dafür, dass Änderungen der Anwendung an alle Components automatisch weitergegeben werden (reicht bis mittelgroße Anwendungen)
+* Für große Anwendungen gibt es noch das State Management Tool Vuex
 
 
 Verwendete Befehle
