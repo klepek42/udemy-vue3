@@ -27,6 +27,10 @@ Learning
 ** Mutations = die eigentliche Änderung der Daten
 * Reactivity System von Vue.js sorgt dafür, dass Änderungen der Anwendung an alle Components automatisch weitergegeben werden (reicht bis mittelgroße Anwendungen)
 * Für große Anwendungen gibt es noch das State Management Tool Vuex
+* Bindung von Datenelementen aus dem Store an Components via Props
+* Props mit langer Schreibweise zur Aussteuerung von Warnungen bei Nichteinhaltung (Restriktion von Datentypen, Pflichtbedingung)
+* Weitere Attribute für Props (default Wert, validator -> Prüfung ob der Wert der eigenen Erwartung entspricht)
+* Egal ob Attribute bei Props fehlschlagen, die Components werden trotzdem gebaut
 
 
 Verwendete Befehle
