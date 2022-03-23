@@ -31,6 +31,13 @@ Learning
 * Props mit langer Schreibweise zur Aussteuerung von Warnungen bei Nichteinhaltung (Restriktion von Datentypen, Pflichtbedingung)
 * Weitere Attribute für Props (default Wert, validator -> Prüfung ob der Wert der eigenen Erwartung entspricht)
 * Egal ob Attribute bei Props fehlschlagen, die Components werden trotzdem gebaut
+* Vue Konzept Slots mit eigenem Tag <slot> zur Markierung eines Platzhalters, der von außen befüllt werden kann
+* Bei einem Slot und klarer Zuordnung eines Templates kann ohne einen Namen gearbeitet werden
+* Named Slots
+** Bei mehreren Slots müssen Slots benannt werden, um die Zuordnung herzustellen. Benamung mit name=""
+** Wird einem Slot kein Name gegeben, wird diesem implizit der Name "default" gegeben
+* Template-Tag <template> zur Bestimmung, welches Template in welchen Slot gefüllt wird
+* v-slot:
 
 
 Verwendete Befehle
@@ -39,3 +46,6 @@ Verwendete Befehle
 * npm run serve
 * npm install bootstrap
 * npm install --save @fortawesome/fontawesome-free
+
+Neue Directives
+* v-slot:<Name des Slots, welches befüllt werden soll>
