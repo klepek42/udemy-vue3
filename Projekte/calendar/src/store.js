@@ -11,7 +11,9 @@ const state = reactive({
 });
 
 //
-const getters = {};
+const getters = {
+  activeDay: () => state.calendarWeekData.find((day) => day.active) // Ohne Klammern, da nur eine Anweisung folgt
+};
 
 //
 const mutations = {};
