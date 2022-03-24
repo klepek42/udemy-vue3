@@ -2,12 +2,14 @@
   <div id="calendar-event">
     <div class="alert text-center" :class="alertColor">
       <div>
-        <!-- <strong>{{ priorityDisplayName }}</strong> -->
-      <slot name="eventPriority"></slot>
+        <slot name="eventPriority">
+          <strong>{{ priorityDisplayName }}</strong>
+        </slot>
       </div>
 
-      <!-- <div>{{ event.title }}</div> -->
-      <slot name="default"></slot>
+      <slot
+        ><div>{{ event.title }}</div>
+      </slot>
 
       <div>
         <i class="fas fa-edit me-2" role="button"></i>
@@ -37,7 +39,7 @@ export default {
     },
     alertColor() {
       return "alert-" + this.event.color;
-    }
+    },
   },
 };
 </script>

@@ -37,7 +37,8 @@ Learning
 ** Bei mehreren Slots müssen Slots benannt werden, um die Zuordnung herzustellen. Benamung mit name=""
 ** Wird einem Slot kein Name gegeben, wird diesem implizit der Name "default" gegeben
 * Template-Tag <template> zur Bestimmung, welches Template in welchen Slot gefüllt wird
-* v-slot:
+* Directive v-slot zur benannten Befüllung eines Slots mit einem Template
+* Fallback-Content: Inhalt, der im Falle eines fehlenden Inhalts angezeigt wird. Die Fallback Befüllung geschieht automatisch, da wir die Slots nicht von außen befüllt haben
 
 
 Verwendete Befehle
