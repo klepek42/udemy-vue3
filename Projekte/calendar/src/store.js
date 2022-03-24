@@ -16,7 +16,19 @@ const getters = {
 };
 
 //
-const mutations = {};
+const mutations = {
+  deleteEvent(dayId, eventTitle) {
+    // Speichere den Tag in einer Variable
+    // Prüfe ob die übergebene dayId mit der ID des day über die iteriert wird übereinstimmt
+    const dayObj = state.calendarWeekData.find((day) => day.id === dayId);
+    
+    // Bestimme den Index des zu löschenden Events
+    const eventIndex = dayObj.events.findIndex((event) => event.title === eventTitle);
+    
+    // Lösche das Event am ermittelten Index aus dem Events-Array des Day-Objekts
+    dayObj.events.splice(eventIndex, 1);
+  }
+};
 
 export default {
   state: readonly(state),   // Daten können nur gelesen und nicht verändert werden

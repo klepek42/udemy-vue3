@@ -12,6 +12,7 @@
         v-for="event in day.events"
         :key="event.title"
         :event="event"
+        :day="day"
       >
         <!-- Attribut (Computed Property) wird aus dem Event Component übergeben -->
         <!-- <template v-slot:eventPriority="slotProps"> -->
