@@ -2,12 +2,12 @@
   <div id="calendar-event">
     <div class="alert text-center" :class="alertColor">
       <div>
-        <slot name="eventPriority">
+        <slot name="eventPriority" :priorityDisplayName="priorityDisplayName">
           <strong>{{ priorityDisplayName }}</strong>
         </slot>
       </div>
 
-      <slot
+      <slot :event="event"
         ><div>{{ event.title }}</div>
       </slot>
 

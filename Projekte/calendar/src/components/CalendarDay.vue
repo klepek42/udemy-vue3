@@ -13,9 +13,12 @@
         :key="event.title"
         :event="event"
       >
-        <template v-slot:eventPriority></template>
+        <template v-slot:eventPriority="slotProps"> <!-- Attribut (Computed Property) wird aus dem Event Component übergeben -->
+          <h5>{{ slotProps.priorityDisplayName }}</h5>
+        </template>
+
         <!-- <template v-slot:default></template>   Identisch mit der Schreibweise darunter -->
-        <template v-slot></template>
+        <template v-slot="{ event: entry }"><i>{{ entry.title }}</i></template>  <!-- Beispiel für Destructuring: Abruf des gewünschten Inhalts und Umbenennung -->
       </CalendarEvent>
     </div>
   </div>

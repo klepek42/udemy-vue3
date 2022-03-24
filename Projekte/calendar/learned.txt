@@ -39,6 +39,9 @@ Learning
 * Template-Tag <template> zur Bestimmung, welches Template in welchen Slot gefüllt wird
 * Directive v-slot zur benannten Befüllung eines Slots mit einem Template
 * Fallback-Content: Inhalt, der im Falle eines fehlenden Inhalts angezeigt wird. Die Fallback Befüllung geschieht automatisch, da wir die Slots nicht von außen befüllt haben
+* Scoped Slots bzw. Slot Props: Props, die an einen Slot weitergegeben werden. Dies macht Sinn, da weitere Components nicht unbedingt einen direkten Zugriff auf die Attribute haben könnten
+* Destructuring: Verwendung einfacher Curly Braces und Benennung des gewünschten Inhalts: z.B. nur für das event-Object { event }
+* Innerhalb des Destructuring's ist auch eine Umbennenung des abgerufenen Inhalts möglich, falls es z.B. semantisch besser passen sollte
 
 
 Verwendete Befehle
