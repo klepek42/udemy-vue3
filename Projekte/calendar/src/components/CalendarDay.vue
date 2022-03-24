@@ -13,7 +13,9 @@
         :key="event.title"
         :event="event"
       >
-        <template v-slot:eventPriority="slotProps"> <!-- Attribut (Computed Property) wird aus dem Event Component übergeben -->
+        <!-- Attribut (Computed Property) wird aus dem Event Component übergeben -->
+        <!-- <template v-slot:eventPriority="slotProps"> -->
+        <template #eventPriority="slotProps">
           <h5>{{ slotProps.priorityDisplayName }}</h5>
         </template>
 

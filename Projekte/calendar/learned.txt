@@ -53,3 +53,7 @@ Verwendete Befehle
 
 Neue Directives
 * v-slot:<Name des Slots, welches befüllt werden soll>
+
+Abkürzungen
+* v-slot --> # (Doppelkreuz) --> #eventPriority="slotProps" statt v-slot:eventPriority="slotProps"
+** bei default --> #default statt v-slot oder v-slot:default
